@@ -5,8 +5,8 @@ function toggleDarkMode() {
   body.classList.toggle("dark-mode");
 
   if (body.classList.contains("dark-mode")) {
-    button.textContent = "Light Mode"; // when dark mode is active
+    button.textContent = "Light Mode"; 
   } else {
-    button.textContent = "Dark Mode"; // when back to light mode
+    button.textContent = "Dark Mode";
   }
 }
