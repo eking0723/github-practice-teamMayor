@@ -1,22 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Starter Page</title>
-
-    <link rel="stylesheet" href="styles/global.css" />
-  </head>
+ </head>
   <body>
     <header>
+      <link rel="stylesheet" href="styles/contact.css" />
+      <link rel="stylesheet" href="styles/global.css" />
+      <link rel="icon" type="image/x-icon" href="styles/favicon.ico" />
       <h1>Welcome to My Website</h1>
     </header>
 
-    <main>
-      <h2>Hello World</h2>
+@@ -33,6 +36,21 @@ <h2>Hello World</h2>
       <p>This is a starter HTML template. You can add more content here.</p>
-      <button class="toggle-btn" onclick="toggleDarkMode()">Dark Mode</button>
     </main>
+
+    <section>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+     <button class="toggle-btn" onclick="toggleDarkMode()">Dark Mode</button>
 
     <footer>
       <p>&copy; 2025 My Website</p>
@@ -24,3 +34,4 @@
     <script src="scripts/main.js"></script>
   </body>
 </html>
+
