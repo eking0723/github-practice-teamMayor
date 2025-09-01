@@ -1,4 +1,7 @@
-/* Reset some defaults */
+#contactFormSection {
+  display: none; 
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,7 +10,6 @@ body {
   color: #333;
 }
 
-/* Section styling */
 section {
   max-width: 600px;
   margin: 40px auto;
@@ -17,26 +19,34 @@ section {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Heading */
 section h2 {
   text-align: center;
   margin-bottom: 20px;
   color: #222;
 }
 
-/* Form layout */
 form {
   display: flex;
   flex-direction: column;
 }
 
-/* Labels */
+.form-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-header p {
+  color: var(--text-color);
+  opacity: 0.8;
+  margin-top: 0.5rem;
+}
+
+
 form label {
   margin: 10px 0 5px;
   font-weight: bold;
 }
 
-/* Inputs and textarea */
 form input,
 form textarea {
   padding: 10px;
@@ -46,17 +56,22 @@ form textarea {
   width: 96%;
 }
 
-/* Textarea specifically */
-form textarea {
-  min-height: 120px;
-  resize: vertical; /* user can adjust height */
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #8b949e;
 }
 
-/* Button */
+
+form textarea {
+  min-height: 120px;
+  resize: vertical; 
+}
+
 form button {
   margin-top: 15px;
   padding: 12px;
-  background: #0077cc;
+  background: #a75d5d;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -66,5 +81,72 @@ form button {
 }
 
 form button:hover {
-  background: #005fa3;
+  background: #744040;
+}
 
+/* Loading spinner for button */
+.btn-loading {
+  position: relative;
+  color: transparent !important;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 0.8s ease infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Success message */
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: none;
+  border-left: 4px solid #28a745;
+}
+
+.success-message i {
+  color: #28a745;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.success-message p {
+  margin: 0;
+  display: inline;
+}
+
+/*
+//Form validation states 
+input:invalid, textarea:invalid {
+  border-color: #e74c3c;
+}
+
+input:valid, textarea:valid {
+  border-color: #27ae60;
+}
+*/
+
+/* Button disabled state */
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  background: var(--button-bg);
+}
