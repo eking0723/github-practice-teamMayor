@@ -24,17 +24,53 @@
     </style>
   </head>
   <body>
+
+    <nav>
+      <ul>
+        <li><a href="#" id="homeLink">Home</a></li> 
+        <li><a href="#" id="aboutLink">About</a></li> 
+        <li><a href="#" id="contactLink">Contact</a></li> 
+      </ul>
+    </nav>
+
     <header>
       <h1>Welcome to My Website</h1>
     </header>
+             
 
-    <main>
-      <h2>Hello World</h2>
-      <p>This is a starter HTML template. You can add more content here.</p>
-    </main>
+    <section id="homeSection">
+      <main>
+        <h2>Hello World</h2>
+        <p>This is a starter HTML template. You can add more content here.</p>
+      </main>
+    </section>
+
+   <!-- Change <section> to <section id="contactFormSection" style="display: none;"> -->
+     <!-- Change the css and js also. Thanks -->
+    <section>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section id="aboutSection" style="display: none;">
+       <!-- Write the about me section here -->
+    </section>
 
     <footer>
       <p>&copy; 2025 My Website</p>
     </footer>
+    
+    <script src="scripts/main.js"></script>
+    <script src="scripts/contact.js"></script>
   </body>
 </html>
