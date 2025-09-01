@@ -8,7 +8,6 @@ function hideAllSections() {
             section.style.display = 'none';
         }
     });
-<<<<<<< Updated upstream
 });
 function toggleDarkMode() {
   const body = document.body;
@@ -22,47 +21,3 @@ function toggleDarkMode() {
     button.textContent = "Dark Mode";
   }
 }
-=======
-}
-
-navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        navLinks.forEach(l => l.classList.remove('active'));   
-        
-        link.classList.add('active');
-        
-        hideAllSections();
-
-        if (link.id === 'homeLink') {
-            document.getElementById('homeSection').style.display = 'block';
-        } else if (link.id === 'aboutLink') {
-            document.getElementById('aboutSection').style.display = 'block';
-        } else if (link.id === 'contactLink') {
-            document.getElementById('contactFormSection').style.display = 'block';
-        }
-        
-        link.classList.add('active');
-        
-        hideAllSections();
-
-        if (link.id === 'homeLink') {
-            document.getElementById('homeSection').style.display = 'block';
-        } else if (link.id === 'aboutLink') {
-            document.getElementById('aboutSection').style.display = 'block';
-        } else if (link.id === 'contactLink') {
-            document.getElementById('contactFormSection').style.display = 'block';
-        }
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    hideAllSections();
-    document.getElementById('homeSection').style.display = 'block';
-    document.getElementById('homeLink').classList.add('active');
-});
->>>>>>> Stashed changes
