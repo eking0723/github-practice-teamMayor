@@ -8,6 +8,4 @@ form.addEventListener('submit', (event) => {
   alert('Form submitted successfully!');
 
     form.reset();
-});
-
 
