@@ -29,7 +29,22 @@ navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
         
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        
         navLinks.forEach(l => l.classList.remove('active'));   
+        
+        link.classList.add('active');
+        
+        hideAllSections();
+
+        if (link.id === 'homeLink') {
+            document.getElementById('homeSection').style.display = 'block';
+        } else if (link.id === 'aboutLink') {
+            document.getElementById('aboutSection').style.display = 'block';
+        } else if (link.id === 'contactLink') {
+            document.getElementById('contactFormSection').style.display = 'block';
+        }
         
         link.classList.add('active');
         
