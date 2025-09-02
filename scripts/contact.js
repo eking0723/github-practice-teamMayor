@@ -75,7 +75,7 @@ form.addEventListener('submit', async (event) => {
     
     // Reset form and button state
     form.reset();
-<<<<<<< Updated upstream
+
     submitBtn.classList.remove('btn-loading');
     submitBtn.disabled = false;
     
@@ -117,6 +117,3 @@ if (form) {
     });
 }
 */
-=======
-});
->>>>>>> Stashed changes

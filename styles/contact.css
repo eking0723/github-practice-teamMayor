@@ -84,7 +84,6 @@ form button:hover {
   background: #744040;
 }
 
-<<<<<<< Updated upstream
 /* Loading spinner for button */
 .btn-loading {
   position: relative;
@@ -150,7 +149,6 @@ button:disabled {
 
 button:disabled:hover {
   background: var(--button-bg);
-}
   background: #005fa3;
 }
 
@@ -167,6 +165,4 @@ body.dark-mode form textarea {
   background-color: #fff;
   color: #333;      
   border: 1px solid #ccc;
-=======
->>>>>>> Stashed changes
 }
