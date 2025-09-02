@@ -49,7 +49,7 @@ function initPage() {
     setupNavigation();
 }
 
-=======
+
 
 function hideAllSections() {
     // Select all sections that are part of our page navigation
@@ -127,12 +127,6 @@ form.addEventListener('submit', async (event) => {
     
     // Reset form and button state
     form.reset();
-    submitBtn.classList.remove('btn-loading');
-    submitBtn.disabled = false;
-    
-  }, 2000);
-});
-
     submitBtn.classList.remove('btn-loading');
     submitBtn.disabled = false;
     
