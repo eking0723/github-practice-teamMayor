@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Starter Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -26,6 +27,7 @@
   <body>
 
     <nav>
+        <button class="toggle-btn" onclick="toggleDarkMode()">Dark Mode</button>
       <ul>
         <li><a href="#" id="homeLink">Home</a></li> 
         <li><a href="#" id="aboutLink">About</a></li> 
@@ -38,7 +40,8 @@
       <link rel="stylesheet" href="styles/global.css" />
       <link rel="icon" type="image/x-icon" href="styles/favicon.ico" />
       <h1>Welcome to My Website</h1>
-    </header>        
+    </header>
+    </header>
 
     <section id="homeSection">
       <main>
@@ -47,29 +50,140 @@
       </main>
     </section>
 
-   <!-- Change <section> to <section id="contactFormSection" style="display: none;"> -->
-     <!-- Change the css and js also. Thanks -->
-    <section>
+    <section id="contactFormSection" style="display: none;">
+      <div class="form-header">
+        <i class="fas fa-envelope-open-text fa-2x"></i>
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you. Send us a message!</p>
+      </div>
       <form action="#" method="post">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required />
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
 
         <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
+        <textarea id="message" name="message" rows="4" placeholder="Write your message here"></textarea>
 
         <button type="submit">Submit</button>
       </form>
     </section>
 
-    <section id="aboutSection" style="display: none;">
-       <!-- Write the about me section here -->
+<section id="aboutSection" style="display: none;">
+  <div class="about-container">
+    <h2>Meet Our Team</h2>
+    <p class="team-description">We are a passionate group of developers dedicated to creating exceptional web experiences. Our diverse skills and collaborative approach ensure we deliver high-quality solutions.</p>
+    
+    <div class="team-container">
+      <div class="team-member">
+        <div class="member-image">
+          <img src="assets/coting-profile.jpg" alt="Coting, Eulo Rod" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22150%22 height=%22150%22 viewBox=%220 0 150 150%22%3E%3Crect fill=%22%23dddddd%22 width=%22150%22 height=%22150%22/%3E%3Ctext fill=%22%23666666%22 font-family=%22Arial%22 font-size=%2212%22 text-anchor=%22middle%22 x=%2275%22 y=%2280%22%3EImage%3C/text%3E%3C/svg%3E'"/>
+          <div class="social-links">
+            <a href="mailto:22-1-02605@vsu.edu.ph" class="social-link" title="Email">📧</a>
+            <a href="https://github.com/eking0723" class="social-link" title="GitHub">🐱</a>
+          </div>
+        </div>
+        <h3>Coting, Eulo Rod</h3>
+        <p class="role">Frontend Developer, Team Leader</p>
+        <p class="bio">Guiding the team with expertise in modern frontend frameworks and project management.</p>
+      </div>
+
+      <div class="team-member">
+        <div class="member-image">
+          <img src="assets/molar-profile.jpg" alt="Molar, Bea" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22150%22 height=%22150%22 viewBox=%220 0 150 150%22%3E%3Crect fill=%22%23dddddd%22 width=%22150%22 height=%22150%22/%3E%3Ctext fill=%22%23666666%22 font-family=%22Arial%22 font-size=%2212%22 text-anchor=%22middle%22 x=%2275%22 y=%2280%22%3EImage%3C/text%3E%3C/svg%3E'"/>
+          <div class="social-links">
+            <a href="mailto:22-1-02613@vsu.edu.ph" class="social-link" title="Email">📧</a>
+            <a href="https://github.com/molar-bea" class="social-link" title="GitHub">🐱</a>
+          </div>
+        </div>
+        <h3>Molar, Bea</h3>
+        <p class="role">Backend Developer</p>
+        <p class="bio">Creating robust server-side solutions and ensuring seamless data management.</p>
+      </div>
+
+      <div class="team-member">
+        <div class="member-image">
+          <img src="assets/balajadia-profile.png" alt="Balajadia, Ericson Solon" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22150%22 height=%22150%22 viewBox=%220 0 150 150%22%3E%3Crect fill=%22%23dddddd%22 width=%22150%22 height=%22150%22/%3E%3Ctext fill=%22%23666666%22 font-family=%22Arial%22 font-size=%2212%22 text-anchor=%22middle%22 x=%2275%22 y=%2280%22%3EImage%3C/text%3E%3C/svg%3E'"/>
+          <div class="social-links">
+            <a href="mailto:ericsonbalajadia0@gmail.com" class="social-link" title="Email">📧</a>
+            <a href="https://github.com/ericsonbalajadia" class="social-link" title="GitHub">🐱</a>
+          </div>
+        </div>
+        <h3>Balajadia, Ericson Solon</h3>
+        <p class="role">Frontend Developer</p>
+        <p class="bio">Specializing in creating responsive and interactive user interfaces.</p>
+      </div>
+
+      <div class="team-member">
+        <div class="member-image">
+          <img src="assets/piedraverde-profile.jpg" alt="Piedraverde, Allyson Jhen" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22150%22 height=%22150%22 viewBox=%220 0 150 150%22%3E%3Crect fill=%22%23dddddd%22 width=%22150%22 height=%22150%22/%3E%3Ctext fill=%22%23666666%22 font-family=%22Arial%22 font-size=%2212%22 text-anchor=%22middle%22 x=%2275%22 y=%2280%22%3EImage%3C/text%3E%3C/svg%3E'"/>
+          <div class="social-links">
+            <a href="mailto:22-1-02605@vsu.edu.ph" class="social-link" title="Email">📧</a>
+            <a href="https://github.com/PiedraverdeAllysonJhen" class="social-link" title="GitHub">🐱</a>
+          </div>
+        </div>
+        <h3>Piedraverde, Allyson Jhen</h3>
+        <p class="role">Frontend Developer, UI/UX Designer</p>
+        <p class="bio">Crafting beautiful and intuitive user experiences with a focus on accessibility.</p>
+      </div>
+
+      <div class="team-member">
+        <div class="member-image">
+          <img src="assets/boyles-profile.jpg" alt="Boyles, Christian Earl James" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22150%22 height=%22150%22 viewBox=%220 0 150 150%22%3E%3Crect fill=%22%23dddddd%22 width=%22150%22 height=%22150%22/%3E%3Ctext fill=%22%23666666%22 font-family=%22Arial%22 font-size=%2212%22 text-anchor=%22middle%22 x=%2275%22 y=%2280%22%3EImage%3C/text%3E%3C/svg%3E'"/>
+          <div class="social-links">
+            <a href="mailto:22-1-02613@vsu.edu.ph" class="social-link" title="Email">📧</a>
+            <a href="https://github.com/Ytian-DEV" class="social-link" title="GitHub">🐱</a>
+          </div>
+        </div>
+        <h3>Boyles, Christian Earl James</h3>
+        <p class="role">Full Stack Developer</p>
+        <p class="bio">Bridging frontend and backend development to create cohesive web applications.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="contactFormSection" style="display: none;">
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Write your message here"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
     </section>
 
+    
     <footer>
-      <p>&copy; 2025 My Website</p>
+      <script src="scripts/main.js"></script>
+      <p>Visit us on:</p>
+      <div class="container">
+        <div class="reference">
+          <i class="fa-brands fa-github"></i>
+          <a class="links" href="https://github.com" target="_blank" title="Go to GitHub"
+            >GitHub.com</a
+          >
+        </div>
+        <div class="reference">
+          <i class="fa-brands fa-facebook"></i>
+          <a class="links" href="https://facebook.com" target="_blank" title="Go to Facebook"
+            >Facebook.com</a
+          >
+        </div>
+        <div class="reference">
+          <i class="fa-brands fa-linkedin"></i>
+          <a class="links" href="https://linkedin.com" target="_blank" title="Go to LinkedIn"
+            >LinkedIn.com</a
+          >
+        </div>
+      </div>
+      <p>&copy; 2025 teamMayor</p>
     </footer>
     
     <script src="scripts/main.js"></script>
