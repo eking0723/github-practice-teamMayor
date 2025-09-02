@@ -1,0 +1,168 @@
+#contactFormSection {
+  display: none; 
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+section {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-header p {
+  color: var(--text-color);
+  opacity: 0.8;
+  margin-top: 0.5rem;
+}
+
+
+form label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 96%;
+}
+
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #8b949e;
+}
+
+
+form textarea {
+  min-height: 120px;
+  resize: vertical; 
+}
+
+form button {
+  margin-top: 15px;
+  padding: 12px;
+  background: #a75d5d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #744040;
+}
+
+/* Loading spinner for button */
+.btn-loading {
+  position: relative;
+  color: transparent !important;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 0.8s ease infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Success message */
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: none;
+  border-left: 4px solid #28a745;
+}
+
+.success-message i {
+  color: #28a745;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.success-message p {
+  margin: 0;
+  display: inline;
+}
+
+/*
+//Form validation states 
+input:invalid, textarea:invalid {
+  border-color: #e74c3c;
+}
+
+input:valid, textarea:valid {
+  border-color: #27ae60;
+}
+*/
+
+/* Button disabled state */
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  background: var(--button-bg);
+  background: #005fa3;
+}
+
+body.dark-mode section,
+body.dark-mode form,
+body.dark-mode form label,
+body.dark-mode form input,
+body.dark-mode form textarea {
+  color: #333;
+}
+
+body.dark-mode form input,
+body.dark-mode form textarea {
+  background-color: #fff;
+  color: #333;      
+  border: 1px solid #ccc;
+}
