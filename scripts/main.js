@@ -8,7 +8,9 @@ function hideAllSections() {
             section.style.display = 'none';
         }
     });
-});
+};
+
+
 function toggleDarkMode() {
   const body = document.body;
   const button = document.querySelector(".toggle-btn");
