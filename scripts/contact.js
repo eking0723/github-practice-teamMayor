@@ -49,6 +49,59 @@ function initPage() {
     setupNavigation();
 }
 
+=======
+
+function hideAllSections() {
+    // Select all sections that are part of our page navigation
+    const sectionsToHide = document.querySelectorAll('#homeSection, #aboutSection, #contactFormSection');
+    sectionsToHide.forEach(section => {
+        section.style.display = 'none';
+    });
+}
+
+function showSection(sectionId) {
+    hideAllSections();
+    const sectionToShow = document.getElementById(sectionId);
+    if (sectionToShow) {
+        sectionToShow.style.display = 'block';
+    }
+}
+
+function setupNavigation() {
+    const navLinks = document.querySelectorAll('nav a');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            
+            // Remove active class from all links
+            navLinks.forEach(l => l.classList.remove('active'));
+            // Add active class to clicked link
+            this.classList.add('active');
+            
+            // Show the correct section based on the link's ID
+            if (this.id === 'homeLink') {
+                showSection('homeSection');
+            } else if (this.id === 'aboutLink') {
+                showSection('aboutSection');
+            } else if (this.id === 'contactLink') {
+                showSection('contactFormSection'); // This shows your form
+            }
+        });
+    });
+}
+
+function initPage() {
+    // Hide all sections first
+    hideAllSections();
+    // Show only the home section by default
+    showSection('homeSection');
+    // Activate the home link
+    document.getElementById('homeLink').classList.add('active');
+    // Set up the navigation event listeners
+    setupNavigation();
+}
+
 document.addEventListener('DOMContentLoaded', initPage);
 
 // scripts/contact.js
@@ -79,6 +132,13 @@ form.addEventListener('submit', async (event) => {
     
   }, 2000);
 });
+
+    submitBtn.classList.remove('btn-loading');
+    submitBtn.disabled = false;
+    
+  }, 2000);
+});
+
 
 function showSuccessMessage() {
   // Create or show success message
